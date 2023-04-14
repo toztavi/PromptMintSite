@@ -14,6 +14,8 @@ contract PromptNFT is ERC1155, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
+    mapping(uint256 => string) private _promptCIDs;
+
     constructor() ERC1155(_baseURI) {
     }
 
@@ -21,14 +23,24 @@ contract PromptNFT is ERC1155, Ownable {
         return string(abi.encodePacked(_baseURI, tokenId.toString()));
     }
 
-    function mint(uint256 amount) public onlyOwner {
+    function mint(uint256 amount, string memory promptCID) public onlyOwner {
         _tokenIds.increment();
         uint256 newTokenId = _tokenIds.current();
 
         _mint(_msgSender(), newTokenId, amount, "");
+        _setPromptCID(newTokenId, promptCID);
     }
 
     function setBaseURI(string memory newBaseURI) public onlyOwner {
         _baseURI = newBaseURI;
     }
+
+    function _setPromptCID(uint256 tokenId, string memory cid) internal {
+        _promptCIDs[tokenId] = cid;
+    }
+
+    function getTokenCID(uint256 tokenId) public view onlyOwner returns (string memory) {
+        return _promptCIDs[tokenId];
+    }
+
 }
