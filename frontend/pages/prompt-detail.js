@@ -23,7 +23,7 @@ const PromptDetail = () => {
             </button>
           </Link>
           <a
-            href="https://testnets.opensea.io/ja"
+            href="https://testnets.opensea.io/ja/assets/mumbai/0x9cd6ddb8ec8f6805eb53f0943d8e8f51589db32e/6"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"

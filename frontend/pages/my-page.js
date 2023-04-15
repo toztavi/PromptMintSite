@@ -13,7 +13,7 @@ const MyPage = () => {
       <p className="text-xl mb-8">Your Prompt NFTs</p>
 
       <div className="flex flex-col md:flex-row md:items-center">
-          <img src="cat3.png" alt="画像の説明" style={{ maxWidth: "20%" }} className="w-full md:w-auto md:mr-2 mb-4 md:mb-0" />
+          <img src="cat1.png" alt="画像の説明" style={{ maxWidth: "20%" }} className="w-full md:w-auto md:mr-2 mb-4 md:mb-0" />
           
           <div>
             <p>Prompt Name</p>
