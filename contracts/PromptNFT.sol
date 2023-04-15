@@ -11,7 +11,7 @@ import "@openzeppelin/contracts@4.6.0/security/ReentrancyGuard.sol";
 contract PromptNFT is ERC1155, Ownable, ReentrancyGuard {
     using Strings for uint256;
 
-    string private _baseURI = "https://api.nft.storage/";
+    string private _baseURI = "https://bafkreibvwzp2tko3fyppqshlsz33vsn7bzn45hb757imzmqprpznclpedy.ipfs.nftstorage.link/";
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -27,8 +27,8 @@ contract PromptNFT is ERC1155, Ownable, ReentrancyGuard {
     constructor() ERC1155(_baseURI) {
     }
 
-    function _uri(uint256 tokenId) internal view virtual returns (string memory) {
-        return string(abi.encodePacked(_baseURI, tokenId.toString()));
+    function _uri() internal view virtual returns (string memory) {
+        return string(abi.encodePacked(_baseURI));
     }
 
     function mint(uint256 amount, string memory promptCID, uint256 royaltyPercentage) public onlyOwner {
@@ -36,6 +36,7 @@ contract PromptNFT is ERC1155, Ownable, ReentrancyGuard {
         uint256 newTokenId = _tokenIds.current();
 
         _mint(_msgSender(), newTokenId, amount, "");
+        
         _tokenData[newTokenId] = TokenData(msg.sender, royaltyPercentage, promptCID);
     }
 
@@ -63,5 +64,6 @@ contract PromptNFT is ERC1155, Ownable, ReentrancyGuard {
         // トークンを売り手から購入者に転送
         safeTransferFrom(seller, msg.sender, tokenId, amount, "");
     }
+
 
 }
