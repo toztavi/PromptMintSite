@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from "next/head";
+import Link from "next/link";
 
 const NotUnique = () => {
   return (
@@ -7,38 +7,51 @@ const NotUnique = () => {
       <Head>
         <title>Not Unique</title>
       </Head>
-      <h1 className="text-4xl font-bold mb-8">Oops!</h1>
+      <h1 className="text-4xl font-bold mb-4">Oops!</h1>
       <p className="text-xl mb-8">Error!</p>
-      <p className="text-xl mb-8">Your Prompt is similler with below.</p>
+      <p className="text-xl mb-8">Your prompt is similar to the following:</p>
 
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-col md:flex-row md:justify-center items-center">
         <div className="relative m-2">
-          <img src="cat3.png" alt="画像の説明" style={{ maxWidth: "20%", opacity: 0.5 }} className="w-full md:w-auto" />
-          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full text-red-500 font-bold">
-            <p>95%</p>
+          <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
+            <p style={{ zIndex: 1 }}>95%</p>
           </div>
-        </div>
-
-
-        <div className="relative m-2">
-          <img src="cat3.png" alt="画像の説明" style={{ maxWidth: "20%", opacity: 0.5 }} className="w-full md:w-auto" />
-          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full text-red-500 font-bold">
-            <p>95%</p>
-          </div>
+          <img
+            src="cat3.png"
+            alt="画像の説明"
+            style={{ maxWidth: "50%", opacity: 0.5 }}
+            className="w-full md:w-auto mx-auto"
+          />
         </div>
 
         <div className="relative m-2">
-          <img src="cat3.png" alt="画像の説明" style={{ maxWidth: "20%", opacity: 0.5 }} className="w-full md:w-auto" />
-          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full text-red-500 font-bold">
-            <p>95%</p>
+          <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
+            <p style={{ zIndex: 1 }}>95%</p>
           </div>
+          <img
+            src="cat3.png"
+            alt="画像の説明"
+            style={{ maxWidth: "50%", opacity: 0.5 }}
+            className="w-full md:w-auto mx-auto"
+          />
+        </div>
+
+        <div className="relative m-2">
+          <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
+            <p style={{ zIndex: 1 }}>95%</p>
+          </div>
+          <img
+            src="cat3.png"
+            alt="画像の説明"
+            style={{ maxWidth: "50%", opacity: 0.5 }}
+            className="w-full md:w-auto mx-auto"
+          />
         </div>
       </div>
 
-
       <div className="mt-8">
         <Link href="/" passHref>
-          <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          <button className="bg-white text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow-md hover:bg-gray-100">
             Go back to index
           </button>
         </Link>
@@ -46,7 +59,5 @@ const NotUnique = () => {
     </div>
   );
 };
-
-
 
 export default NotUnique;

@@ -55,16 +55,6 @@ const MintYourPrompt = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
-      <style jsx>{`.min-h-screen {
-          background-image: url('/wafuu.png');
-          background-size: cover;
-          background-position: center;}
-          .text-color {
-            color: #ffffff;
-          }
-          
-          `}
-      </style>
       <Head>
         <title>Mint Your Prompt</title>
       </Head>
