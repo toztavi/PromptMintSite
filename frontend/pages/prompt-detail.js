@@ -9,7 +9,7 @@ const PromptDetail = () => {
         <title>Prompt Detail</title>
       </Head>
       <div className="w-full max-w-lg p-8 bg-white rounded-md shadow-lg">
-        <h1 className="text-3xl font-bold mb-8">Prompt Detail</h1>
+        <h1 className="text-3xl font-bold mb-8">Prompt Details</h1>
         <p className="text-lg mb-4">This is the detail page for a prompt.</p>
         <ul className="list-disc pl-6 mb-4">
           <li>Detail 1</li>
