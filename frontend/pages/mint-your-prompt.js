@@ -145,21 +145,20 @@ const MintYourPrompt = () => {
         </div>
 
         {/* Mint Button Details */}
-        <div className="self-end">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
-            onClick={handleMint}
-            disabled={minting}
-          >
-            {minting ? 'Minting...' : 'Mint'}
-          </button>
-          <Link href="/" passHref>
-            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-              Go back to index
-            </button>
-          </Link>
-        </div>
-
+        <div className="flex flex-row-reverse">
+        <Link href="/" passHref>
+    <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+      Go back to index
+    </button>
+  </Link>
+  <button
+    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+    onClick={handleMint}
+    disabled={minting}
+  >
+    {minting ? 'Minting...' : 'Mint'}
+  </button>
+</div>
       </div>
     </div>
   );
