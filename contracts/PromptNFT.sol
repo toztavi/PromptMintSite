@@ -42,6 +42,7 @@ contract PromptNFT is ERC1155, Ownable, ReentrancyGuard {
 
     function setBaseURI(string memory newBaseURI) public onlyOwner {
         _baseURI = newBaseURI;
+        _setURI(newBaseURI);
     }
 
     function getTokenCID(uint256 tokenId) public view onlyOwner returns (string memory) {
