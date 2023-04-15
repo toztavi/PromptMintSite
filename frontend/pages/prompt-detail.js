@@ -30,7 +30,42 @@ const PromptDetail = () => {
           >
             Open OpenSea in a new tab
           </a>
+
+          
+
+
         </div>
+        <div className="flex space-x-2 mt-8">
+
+          {/* <Link href="/" passHref>
+            <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+              Go back to index
+            </button>
+          </Link>
+          <a
+            href="https://testnets.opensea.io/ja"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
+          >
+            Open OpenSea in a new tab
+          </a> */}
+
+          
+        {/* 隠しボタンを作る */}
+        <a
+            // href="/afterbuy"prompt-detail-afterbuy
+            href="/prompt-detail-afterbuy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-6 bg-white-500 text-white rounded-md hover:bg-green-600"
+          >
+            after bought a NFT
+          </a>
+
+
+        </div>
+
       </div>
     </div>
   );
