@@ -55,145 +55,121 @@ const MintYourPrompt = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
+      <style jsx>{`.min-h-screen {
+          background-image: url('/wafuu.png');
+          background-size: cover;
+          background-position: center;}
+          .text-color {
+            color: #ffffff;
+          }
+          
+          `}
+      </style>
       <Head>
         <title>Mint Your Prompt</title>
       </Head>
 
-      <h1 className="text-4xl font-bold mb-8">Mint Your Prompt</h1>
-      <p className="text-xl mb-8">Here is the page for minting your prompt.</p>
+      <div className="flex flex-col items-start justify-center">
+        <h1 className="text-4xl font-bold mb-8">Mint Your Prompt</h1>
+        <p className="text-xl mb-8">Here is the page for minting your prompt.</p>
 
-      {/* Repeat this block from here*/}
-      <h2 className="text-4xl font-bold mb-8">Prompt Name</h2>
-
-      {/* Prompt Name Input */}
-      <div className="mb-8">
-          <input
-            type="text"
-            placeholder="Enter prompt name"
-            value={promptName}
-            onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
-          />
+        <div className="flex flex-col mb-8">
+          <label htmlFor="promptName" className="font-bold text-xl mb-2">Prompt Name:</label>
+          <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter prompt name"
+              className="px-4 py-2 bg-white rounded-md shadow"
+            />
+          </div>
         </div>
-      {/* Repeat to here */}
 
-
-      {/* Repeat this block from here*/}
-      <h2 className="text-4xl font-bold mb-8">Prompt Category</h2>
-
-        {/* Prompt Name Input */}
-      <div className="mb-8">
-          <input
-            type="text"
-            placeholder="Enter prompt category"
-            value={promptName}
-            onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
-          />
+        <div className="flex flex-col mb-8">
+          <label htmlFor="promptCategory" className="font-bold text-xl mb-2">Prompt Category:</label>
+          <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter prompt category"
+              className="px-4 py-2 bg-white rounded-md shadow"
+            />
+          </div>
         </div>
-      {/* Repeat to here */}
 
-      {/* Repeat this block from here*/}
-      <h2 className="text-4xl font-bold mb-8">Prompt Description</h2>
-
-        {/* Prompt Name Input */}
-      <div className="mb-8">
-          <input
-            type="text"
-            placeholder="Enter prompt Description"
-            value={promptName}
-            onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
-          />
+        <div className="flex flex-col mb-8">
+          <label htmlFor="promptDescription" className="font-bold text-xl mb-2">Prompt Description:</label>
+          <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter prompt description"
+              className="px-4 py-2 bg-white rounded-md shadow"
+            />
+          </div>
         </div>
-      {/* Repeat to here */}
 
-    {/* Repeat this block from here*/}
-      <h2 className="text-4xl font-bold mb-8">Your Prompt</h2>
-
-        {/* Prompt Name Input */}
-      <div className="mb-8">
-          <input
-            type="text"
-            placeholder="Enter your prompt"
-            value={promptName}
-            onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
-          />
+        <div className="flex flex-col mb-8">
+          <label htmlFor="yourPrompt" className="font-bold text-xl mb-2">Your Prompt:</label>
+          <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter prompt description"
+              className="px-4 py-2 bg-white rounded-md shadow"
+            />
+          </div>
         </div>
-      {/* Repeat to here */}
 
-      <h2 className="text-4xl font-bold mb-8">Upload Image</h2>
-      <div>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
-          onClick={handleMint}
-        >
-          Attach
-        </button>
-      </div>
-      {}
+        <div className="flex flex-col mb-8">
+          <label htmlFor="uploadImage" className="font-bold text-xl mb-2">Upload Image:</label>
+          <div className="flex">
+            <input
+              type="file"
+              id="uploadImage"
+              className="hidden"
+            />
+            <label
+              htmlFor="uploadImage"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+            >
+              Select File
+            </label>
+          </div>
+        </div>        <div className="flex flex-col mb-8">
+          <label htmlFor="Supply" className="font-bold text-xl mb-2">Supply:</label>
+          <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter supply number eg. 100"
+              className="px-4 py-2 bg-white rounded-md shadow"
+            />
+          </div>
+        </div>
 
-    {/* Repeat this block from here*/}
-    <h2 className="text-4xl font-bold mb-8">Supply</h2>
+        <div className="flex flex-col mb-8">
+          <label htmlFor="Price" className="font-bold text-xl mb-2">Price:</label>
+          <div className="flex">
+            <input
+              type="text"
+              placeholder="Enter supply number eg. 5 MATIC"
+              className="px-4 py-2 bg-white rounded-md shadow"
+            />
+          </div>
+        </div>
 
-    {/* Prompt Name Input */}
-    <div className="mb-8">
-      <input
-        type="text"
-        placeholder="Enter supply number eg. 100"
-        value={promptName}
-        onChange={handleInputChange}
-        className="px-4 py-2 bg-white rounded-md shadow"
-      />
-    </div>
-    {/* Repeat to here */}
-
-    {/* Repeat this block from here*/}
-    <h2 className="text-4xl font-bold mb-8">Chain</h2>
-
-    {/* Prompt Name Input */}
-    <div className="mb-8">
-      <input
-        type="text"
-        placeholder="Enter supply number eg. Polygon"
-        value={promptName}
-        onChange={handleInputChange}
-        className="px-4 py-2 bg-white rounded-md shadow"
-      />
-    </div>
-    {/* Repeat to here */}
-
-    {/* Repeat this block from here*/}
-    <h2 className="text-4xl font-bold mb-8">Price</h2>
-
-    {/* Prompt Name Input */}
-    <div className="mb-8">
-      <input
-        type="text"
-        placeholder="Enter supply number eg. 5 MATIC"
-        value={promptName}
-        onChange={handleInputChange}
-        className="px-4 py-2 bg-white rounded-md shadow"
-      />
-    </div>
-    {/* Repeat to here */}
-
-      {/* Mint Button Details */}
-      <div>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
-          onClick={handleMint}
-        >
-          Mint
-        </button>
-      </div>
-      <div className="mt-8">
-        <Link href="/" passHref>
-          <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Go back to index
+        {/* Mint Button Details */}
+        <div className="self-end">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+            onClick={handleMint}
+            disabled={minting}
+          >
+            {minting ? 'Minting...' : 'Mint'}
           </button>
-        </Link>
+          <Link href="/" passHref>
+            <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              Go back to index
+            </button>
+          </Link>
+        </div>
+
       </div>
     </div>
   );
