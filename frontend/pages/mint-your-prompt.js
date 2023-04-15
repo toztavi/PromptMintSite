@@ -69,7 +69,7 @@ const MintYourPrompt = () => {
             <input
               type="text"
               placeholder="Enter prompt name"
-              className="px-4 py-2 bg-white rounded-md shadow"
+              className="px-4 py-2 bg-white rounded-md shadow text-black"
             />
           </div>
         </div>
@@ -80,7 +80,7 @@ const MintYourPrompt = () => {
             <input
               type="text"
               placeholder="Enter prompt category"
-              className="px-4 py-2 bg-white rounded-md shadow"
+              className="px-4 py-2 bg-white rounded-md shadow text-black"
             />
           </div>
         </div>
@@ -91,7 +91,7 @@ const MintYourPrompt = () => {
             <input
               type="text"
               placeholder="Enter prompt description"
-              className="px-4 py-2 bg-white rounded-md shadow"
+              className="px-4 py-2 bg-white rounded-md shadow text-black"
             />
           </div>
         </div>
@@ -101,8 +101,8 @@ const MintYourPrompt = () => {
           <div className="flex">
             <input
               type="text"
-              placeholder="Enter prompt description"
-              className="px-4 py-2 bg-white rounded-md shadow"
+              placeholder="Enter prompt"
+              className="px-4 py-2 bg-white rounded-md shadow text-black"
             />
           </div>
         </div>
@@ -128,7 +128,7 @@ const MintYourPrompt = () => {
             <input
               type="text"
               placeholder="Enter supply number eg. 100"
-              className="px-4 py-2 bg-white rounded-md shadow"
+              className="px-4 py-2 bg-white rounded-md shadow text-black"
             />
           </div>
         </div>
@@ -139,7 +139,7 @@ const MintYourPrompt = () => {
             <input
               type="text"
               placeholder="Enter supply number eg. 5 MATIC"
-              className="px-4 py-2 bg-white rounded-md shadow"
+              className="px-4 py-2 bg-white rounded-md shadow text-black"
             />
           </div>
         </div>
