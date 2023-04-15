@@ -17,7 +17,7 @@ const NotUnique = () => {
             <p style={{ zIndex: 1 }}>95%</p>
           </div>
           <img
-            src="cat3.png"
+            src="cat2.png"
             alt="画像の説明"
             style={{ maxWidth: "50%", opacity: 0.5 }}
             className="w-full md:w-auto mx-auto"
@@ -26,7 +26,7 @@ const NotUnique = () => {
 
         <div className="relative m-2">
           <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
-            <p style={{ zIndex: 1 }}>95%</p>
+            <p style={{ zIndex: 1 }}>93%</p>
           </div>
           <img
             src="cat3.png"
@@ -38,10 +38,10 @@ const NotUnique = () => {
 
         <div className="relative m-2">
           <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
-            <p style={{ zIndex: 1 }}>95%</p>
+            <p style={{ zIndex: 1 }}>90%</p>
           </div>
           <img
-            src="cat3.png"
+            src="cat4.png"
             alt="画像の説明"
             style={{ maxWidth: "50%", opacity: 0.5 }}
             className="w-full md:w-auto mx-auto"
