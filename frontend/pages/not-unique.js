@@ -8,13 +8,13 @@ const NotUnique = () => {
         <title>Not Unique</title>
       </Head>
       <h1 className="text-4xl font-bold mb-4">Oops!</h1>
-      <p className="text-xl mb-8">Error!</p>
+      <h1 className="text-3xl mb-8">Error!</h1>
       <p className="text-xl mb-8">Your prompt is similar to the following:</p>
 
       <div className="flex flex-col md:flex-row md:justify-center items-center">
         <div className="relative m-2">
           <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
-            <p style={{ zIndex: 1 }}>95%</p>
+            <p className="text-6xl" style={{ zIndex: 1 }}>95%</p>
           </div>
           <img
             src="cat2.png"
@@ -26,7 +26,7 @@ const NotUnique = () => {
 
         <div className="relative m-2">
           <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
-            <p style={{ zIndex: 1 }}>93%</p>
+            <p  className="text-6xl" style={{ zIndex: 1 }}>93%</p>
           </div>
           <img
             src="cat3.png"
@@ -38,7 +38,7 @@ const NotUnique = () => {
 
         <div className="relative m-2">
           <div className="flex justify-center items-center w-full h-full text-red-500 font-bold absolute top-0 left-0 right-0 bottom-0">
-            <p style={{ zIndex: 1 }}>90%</p>
+            <p  className="text-6xl" style={{ zIndex: 1 }}>90%</p>
           </div>
           <img
             src="cat4.png"
