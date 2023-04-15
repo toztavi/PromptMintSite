@@ -27,7 +27,7 @@ const Minted = () => {
             placeholder="Enter Prompt Name"
             value={promptName}
             onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
+            className="px-4 py-2 bg-white rounded-md shadow text-black"
           />
         </div>
 
@@ -38,7 +38,7 @@ const Minted = () => {
             placeholder="Enter Prompt Category"
             value={promptName}
             onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
+            className="px-4 py-2 bg-white rounded-md shadow text-black"
           />
         </div>
 
@@ -49,7 +49,7 @@ const Minted = () => {
             placeholder="Enter Prompt Discription"
             value={promptName}
             onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
+            className="px-4 py-2 bg-white rounded-md shadow text-black"
           />
         </div>
 
@@ -60,7 +60,7 @@ const Minted = () => {
             placeholder="Enter Your Prompt"
             value={promptName}
             onChange={handleInputChange}
-            className="px-4 py-2 bg-white rounded-md shadow"
+            className="px-4 py-2 bg-white rounded-md shadow text-black"
           />
         </div>
 
