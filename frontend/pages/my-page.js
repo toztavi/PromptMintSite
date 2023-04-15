@@ -9,8 +9,8 @@ const MyPage = () => {
         <title>My Page</title>
       </Head>
       <h1 className="text-4xl font-bold mb-8">My Page</h1>
-      <p className="text-xl mb-8">Welcome to My Page!</p>
-      <p className="text-xl mb-8">Your Prompt NFTs</p>
+      <h2 className="text-xl mb-8">Welcome to My Page!</h2>
+      <h2 className="text-xl mb-8">Your Prompt NFTs</h2>
 
       <div className="flex flex-col md:flex-row md:items-center">
           <img src="cat1.png" alt="画像の説明" style={{ maxWidth: "20%" }} className="w-full md:w-auto md:mr-2 mb-4 md:mb-0" />

@@ -11,34 +11,28 @@ const NotUnique = () => {
       <p className="text-xl mb-8">Error!</p>
       <p className="text-xl mb-8">Your Prompt is similler with below.</p>
 
-      <div className="flex flex-col md:flex-row md:items-center">
-          <img src="cat1.png" alt="画像の説明" style={{ maxWidth: "20%" }} className="w-full md:w-auto md:mr-2 mb-4 md:mb-0" />
-          
-          {/* pic1(中に95%。左に配置) */}
+      <div className="flex flex-wrap justify-center">
+        <div className="relative m-2">
+          <img src="cat3.png" alt="画像の説明" style={{ maxWidth: "20%", opacity: 0.5 }} className="w-full md:w-auto" />
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full text-red-500 font-bold">
+            <p>95%</p>
+          </div>
+        </div>
 
-          <div>
-            <p>95%</p>{/* 絵の中にかぶせる。赤文字 */}
-          </div>   
-      </div>
 
-      <div className="flex flex-col md:flex-row md:items-center">
-          <img src="cat1.png" alt="画像の説明" style={{ maxWidth: "20%" }} className="w-full md:w-auto md:mr-2 mb-6 md:mb-0" />
-          
-          {/* (真ん中に配置) */}
+        <div className="relative m-2">
+          <img src="cat3.png" alt="画像の説明" style={{ maxWidth: "20%", opacity: 0.5 }} className="w-full md:w-auto" />
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full text-red-500 font-bold">
+            <p>95%</p>
+          </div>
+        </div>
 
-          <div>
-            <p>95%</p>{/* 絵の中にかぶせる。赤文字 */}
-          </div>   
-      </div>
-
-      <div className="flex flex-col md:flex-row md:items-center">
-          <img src="cat1.png" alt="画像の説明" style={{ maxWidth: "20%" }} className="w-full md:w-auto md:mr-2 mb-8 md:mb-0" />
-          
-          {/* (右に配置) */}
-
-          <div>
-            <p>95%</p>{/* 絵の中にかぶせる。赤文字 */}
-          </div>   
+        <div className="relative m-2">
+          <img src="cat3.png" alt="画像の説明" style={{ maxWidth: "20%", opacity: 0.5 }} className="w-full md:w-auto" />
+          <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full text-red-500 font-bold">
+            <p>95%</p>
+          </div>
+        </div>
       </div>
 
 
