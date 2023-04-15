@@ -2,25 +2,56 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import useWallet from '../hooks/useWallet';
+
+import Web3 from 'web3';
+import MyERC1155 from '../abis/PromptNFT_metadata.json';
 
 const MintYourPrompt = () => {
   const [randomNumber, setRandomNumber] = useState(null);
   const [promptName, setPromptName] = useState('');
   const router = useRouter();
+  const [minting, setMinting] = useState(false);
 
-  const handleMint = () => {
-    const newRandomNumber = Math.floor(Math.random() * 100) + 1;
-    setRandomNumber(newRandomNumber);
-    if (newRandomNumber % 2 === 0) {
-      router.push('/minted');
-    } else {
-      router.push('/not-unique');
+  const { account, web3 } = useWallet();
+  useEffect(() => {
+    if (account) {
+      console.log('Connected account:', account);
     }
-  };
+  }, [account]);
 
   const handleInputChange = (e) => {
     setPromptName(e.target.value);
   };
+
+  async function handleMint() {
+    // Metamaskが接続されているかを確認する
+    if (typeof window.ethereum === 'undefined') {
+      alert('MetaMaskをインストールしてください');
+      return;
+    }
+    // web3インスタンスを作成する
+    const web3 = new Web3(window.ethereum);
+    // ERC1155トークンのアドレスを設定する
+    const tokenAddress = '0x9cd6ddb8ec8f6805eb53f0943d8e8f51589db32e';
+    // Metamaskから現在のアカウントを取得する
+    const accounts = await web3.eth.requestAccounts();
+    const account = accounts[0];
+    // ERC1155コントラクトのインスタンスを作成する
+    const myERC1155 = new web3.eth.Contract(MyERC1155.abi, tokenAddress);
+    // トークンをMintする
+    try {
+      setMinting(true);
+      await myERC1155.methods.mint(1, "AAAAA", 100).send({ from: account });
+      router.push('/minted');
+    } catch (error) {
+      console.error(error);
+      alert('トークンのMintに失敗しました');
+    } finally {
+      setMinting(false);
+    }
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
@@ -101,13 +132,7 @@ const MintYourPrompt = () => {
           Attach
         </button>
       </div>
-      {/* <div className="mt-8">
-        <Link href="/" passHref>
-          <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Go back to index
-          </button>
-        </Link>
-      </div> */}
+      {}
 
     {/* Repeat this block from here*/}
     <h2 className="text-4xl font-bold mb-8">Supply</h2>
